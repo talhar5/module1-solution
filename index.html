@@ -18,15 +18,15 @@
 <body>
   <div class="container" ng-controller="checkerController">
     <h1>Lunch Checker</h1>
-
     <div class="form-group">
-      <input ng-model="foodList" id="lunch-menu" type="text" placeholder="list comma separated dishes you usually have for lunch"
-        class="form-control">
+      <input ng-model="foodList" id="lunch-menu" type="text"
+        placeholder="list comma separated dishes you usually have for lunch" class="form-control">
+      <div class="text-muted">Empty items are not being considered.</div>
     </div>
     <div class="form-group">
       <button class="btn btn-default" ng-click="check();">Check If Too Much</button>
     </div>
-    <div class="form-group message">
+    <div class="form-group message text-{{textColor}}">
       <!-- Your message can go here. -->
       {{message}}
     </div>
